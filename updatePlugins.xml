@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugins>
+    <plugin id="com.mobidevelop.robovm.intellij" url="https://github.com/dkimitsa/robovm-libcore10-smoketest/releases/download/10.0.1-SNAPSHOT/idea-10.0.1-SNAPSHOT.zip" version="10.0.1-SNAPSHOT">
+        <idea-version since-build="192.3" />
+    </plugin>
+</plugins>
