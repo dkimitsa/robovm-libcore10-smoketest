@@ -27,3 +27,5 @@ gradlew.bat
 
 # build folders
 robovm-build/
+robovmx-build/
+build/

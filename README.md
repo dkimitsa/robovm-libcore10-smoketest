@@ -1,7 +1,7 @@
-# Android 10 runtime for RoboVM -- builds, testing and issue reporting  
+# Android 12 runtime for RoboVM -- builds, testing and issue reporting  
 [**dkimitsa's dev blog**](https://dkimitsa.github.io/)
 
-This repository hosts test code for Libcore10 Java Runtime adapted to be used with RoboVM.    
+This repository hosts test code for Libcore12 Java Runtime adapted to be used with RoboVM.    
 
 ## Getting test build 
 There are several options to get test build:  

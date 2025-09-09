@@ -2,23 +2,4 @@
     <executableName>${app.executable}</executableName>
     <mainClass>${app.mainclass}</mainClass>
     <target>console</target>
-    <forceLinkClasses>
-        <!-- logging -->
-        <pattern>java.util.logging.LoggingProxyImpl</pattern>
-
-        <!-- for ICU -->
-        <pattern>android.icu.text.CollatorServiceShim</pattern>
-        <pattern>android.icu.impl.ICUCurrencyMetaInfo</pattern>
-        <pattern>android.icu.impl.ICUCurrencyDisplayInfoProvider</pattern>
-
-        <!-- for okhttp -->
-        <pattern>com.android.okhttp.HttpsHandler</pattern>
-        <pattern>sun.net.spi.DefaultProxySelector</pattern>
-
-        <!-- for Conscrypt -->
-        <pattern>sun.security.provider.CertPathProvider</pattern>
-        <pattern>com.android.org.conscrypt.**</pattern>
-        <pattern>com.android.org.bouncycastle.**</pattern>
-
-    </forceLinkClasses>
 </config>
