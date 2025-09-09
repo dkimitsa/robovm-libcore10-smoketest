@@ -1,8 +1,5 @@
 package libcore10.tests;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +12,7 @@ import java.util.stream.Collectors;
  * Testing Conscrypt + BoringSSL + okhttp
  */
 public final class Https {
-    public static void test_Https() throws IOException, JSONException {
+    public static String test_Https() throws IOException {
         //https://gitter.im/MobiVM/robovm?at=5ef1d3c7c223cc536a2e4a32
         URL url = new URL("https://www.howsmyssl.com/a/check");
         URLConnection conn = url.openConnection();
@@ -24,11 +21,10 @@ public final class Https {
             response = reader.lines().collect(Collectors.joining());
         }
 
-        JSONObject o = new JSONObject(response);
-        System.out.println(o.toString(2));
+        return response;
     }
 
-    public static void test() throws IOException, JSONException {
-        test_Https();
+    public static String test() throws IOException {
+        return test_Https();
     }
 }

@@ -1,0 +1,13 @@
+apply plugin: 'java'
+apply plugin: 'robovm'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+robovm {
+}
+
+dependencies {
+    implementation project(":shared")
+    implementation "com.robovmx:robovm-rt:${roboVMVersion}"
+    implementation "com.robovmx:robovm-cocoatouch:${roboVMVersion}"
+}
