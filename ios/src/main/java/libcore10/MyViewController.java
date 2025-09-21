@@ -1,15 +1,12 @@
 package libcore10;
 
-import libcore10.tests.Https;
-import libcore10.tests.ICU;
-import libcore10.tests.Streams;
+import libcore10.tests.*;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.uikit.*;
 
 public class MyViewController extends UIViewController {
-    private final UIButton button;
     private final UILabel label;
 
     public MyViewController() {
@@ -28,7 +25,7 @@ public class MyViewController extends UIViewController {
         view.setAutoresizingMask(UIViewAutoresizing.with(UIViewAutoresizing.FlexibleHeight, UIViewAutoresizing.FlexibleWidth));
 
         // Setup button.
-        button = new UIButton(UIButtonType.RoundedRect);
+        UIButton button = new UIButton(UIButtonType.RoundedRect);
         button.setFrame(new CGRect(110, 150, 100, 40));
         button.setTitle("Click me!", UIControlState.Normal);
         button.getTitleLabel().setFont(UIFont.getBoldSystemFont(22));
@@ -43,6 +40,8 @@ public class MyViewController extends UIViewController {
             try {
                 Streams.test();
                 ICU.test();
+                ObjectStream.test();
+                Reflection.test();
                 printJson(Https.test());
             } catch (Throwable t) {
                 throw new RuntimeException(t);

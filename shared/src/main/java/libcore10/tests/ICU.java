@@ -21,9 +21,12 @@ public class ICU {
         String.format(Locale.CANADA_FRENCH, "%s locale", "hello");
     }
 
+    public static void testToLowerCase() {  if ("İ".toLowerCase(Locale.US) == null) throw new Error();}
+
     public static void test() {
         test_rfc3490();
         test_collator();
         testLocale();
+        testToLowerCase();
     }
 }
